@@ -1,0 +1,136 @@
+ID;PROMPT
+T1 (Landmarks);Historical Monuments : You will be shown images of historical landmarks from around the world, and asked to identify the country where the landmark is located.
+T1 Questions;True or False? This landmark is located in Dubaï.
+;True or False? This landmark is located in Turkey.
+;True or False? This landmark is located in Myanmar.
+;True or False? This landmark is located in Spain.
+;True or False? This landmark is located in Brazil.
+;True or False? This landmark is located in the United States of America.
+;True or False? This landmark is located in Cambodia.
+;True or False? This landmark is located in Japan.
+T2 (Movie);Movie themes: You will be provided with short audio files with theme songs from various movies, and asked to select the movie it was featured in.
+T2 Questions;True or False? This music was featured as a theme song in the movie The Lord of the Ring.
+;True or False? This music was featured as a theme song in the movie The Empire of Sun.
+;True or False? This music was featured as a theme song in the movie The Schindler's List.
+;True or False? This music was featured as a theme song in the movie The Pianist.
+;True or False? This music was featured as a theme song in the movie Jurassic Park.
+;True or False? This music was featured as a theme song in the movie Life of Pi.
+;True or False? This music was featured as a theme song in the movie Slumdog Millionaire.
+;True or False? This music was featured as a theme song in the movie Birdman.
+T3 (English);English idioms: You will be given English idioms, and asked to identify their meaning. An idiom is a group of words that have a meaning not deducible from those of the individual words (e.g., rain cats and dogs, see the light ).
+T3 Questions;"True or False? ""To have an axe to grind"" means ""A private end to serve""."
+;"True or False? ""A man of straw"" means ""A very active person""."
+;"True or False? ""To drive home"" means ""To emphasize""."
+;"True or False? ""To smell a rat"" means ""To suspect foul dealings""."
+;"True or False? ""To end in smoke"" means ""To excite great applause""."
+;"True or False? ""To make clean breast of"" means ""To praise oneself""."
+;"True or False? ""To hit the nail right on the head"" means ""To do the right thing""."
+;"True or False? ""To put one's hand to plough"" means ""To take interest in technical work""."
+T4 (Sport, 1);Sport Predictions: You will be given upcoming sport events (soccer and tennis games), and asked to predict the games' outcome?
+T4 Questions;True or False? Paris Saint Germain will tie with the Olympique de Marseille during the French League game on April 17th.
+;True or False? Sevilla FC will beat Real Madrid during the Spanish League game on April 15th.
+;True or False? Atalanta will loose to RB Leipzig during the Europa League game on April 14th.
+;True or False? Stefanos Tsitsipas will win the ATP Masters 1000 Monte Carlo Tournament on April 17th.
+;True or False? Nor Rafael Nadal neither Novak Djokovic will qualify for the ATP Masters 1000 Monte Carlo Final on April 17th.
+;True or False? FC Barcelona will lose to Eintracht during the Europa League game on April 14th.
+;True or False? Atletico di Madrid will qualify for the Champions League semi-final on April 13th instead of Manchester City.
+;True or False? Monaco and Stade Rennais will tie during the French League game on April 15th.
+T5 (Sport, 2, 3, 4);Sport Predictions: You will be given the names of tennis players, and asked to predict which round they will make it to in the Tennis French Open (Roland Garros), taking place in May-June 2022?
+T5 Questions;True or False? Carlos Alcaraz will win the 2022 French Open (Roland Garros).
+;True or False? Garbiñe Muguruza will win another title at the French Open (Roland Garros) in 2022.
+;True or False? Cori Gauff will make it to the second week of the 2022 French Open (Roland Garros).
+;True or False? Casper Ruud will make it to the second week of the 2022 French Open (Roland Garros).
+;True or False? At least five American players (women and men combined) will make it to the fourth round at the 2022 French Open (Roland Garros).
+;True or False? Nor Rafael Nadal neither Novak Djokovic will make it to the final of the 2022 French Open (Roland Garros).
+;True or False? Iga Swiatek will make it to the quarterfinals of the 2022 French Open (Roland Garros).
+;True or False? Both Daniil Medvedev and Stefanos Tsitsipas will make it to the semifinals at the 2022 French Open (Roland Garros).
+T6 (Sports, 5);Sport Predictions: You will be given the names of tennis players (women and men), and asked to predict which round they will make it to in the ongoing Wimbledon Tennis Tournament (The Championships, Wimbledon), taking place between June, 27 and July, 10 2022.
+T6 Questions;True or False? Rafael Nadal will lose his ongoing game against Botic Van De Zandschulp to qualify for the quarter-finals at the  2022 Wimbledon Tennis Tournament.
+;True or False? Simona Halep will win another title at the 2022 Wimbledon Tennis Tournament.
+;True or False? Tatjana Maria will make it to the semi-finals of the 2022 Wimbledon Tennis Tournament.
+;True or False? Jannik Sinner will make it to the semi-finals of the 2022 Wimbledon Tennis Tournament.
+;True or False? At least two American players (women and men combined) will make it to the quater-finals of the 2022 Wimbledon Tennis Tournament.
+;True or False? Nor Rafael Nadal neither Novak Djokovic will make it to the final of the 2022 Wimbledon Tennis Tournament.
+;True or False? Ons Jabeur will make it to the finals of the 2022 Wimbledon Tennis Tournament.
+;True or False? Both David Goffin and Nick Kyrgios will make it to the semi-finals at the 2022 Wimbledon Tennis Tournament.
+T7 (Sport, 6);Soccer Predictions: You will be given upcoming European men soccer games and asked to predict the games' outcome.
+T7 Questions;True or False? Mallorca will lose against Espanyol on Friday October, 28th in the Spanish LaLiga.
+;True or False? Lens will lose against Toulouse on Friday October, 28th French Ligue 1.
+;True or False? Leicester City will win against Manchester City on Saturday October, 29th in the English Premier League.
+;True or False? Valencia will win against Barcelona on Saturday October, 29th in the Spanish LaLiga.
+;True or False? Bayern Munich and Mainz will tie on Saturday October, 29th in the German Bundesliga.
+;True or False? Lecce will win against Juventus on Saturday October, 29th in the Italian Series A .
+;True or False? Real Madrid will lose against Girona on Sunday October, 30th in the Spanish LaLiga.
+;True or False? Lyon will lose against Lille on Sunday October, 30th in the French Ligue 1.
+T8 (Flags);Flags From Around the World: You will be shown images of flags from around the world, and asked to identify their country of origin?
+T8 Questions;True or False? This flag belongs to Austria.
+;True or False? This flag belongs to Guinea.
+;True or False? This flag belongs to Kazakhstan.
+;True or False? This flag belongs to Yemen.
+;True or False? This flag belongs to India.
+;True or False? This flag belongs to Iran.
+;True or False? This flag belongs to Algeria.
+;True or False? This flag belongs to Italy.
+T9 (Building);Construction Year of Buildings: You will shown images of famous buildings from around the world, and asked to estimate the year in which the building was completed.
+T9 Questions;True or False? This building was built in 2003.
+;True or False? This building was built in the 17th century.
+;True or False? This building was built between 1950 and 1965.
+;True or False? This building was built in the early 20th century.
+;True or False? This building was built in the early 21st century.
+;True or False? This building was built in the 12th century.
+;True or False? This building was built in 1810.
+;True or False? This building was built in the 17th century.
+T10 (Constellations);Constellations: You will shown images of constellations and asked to identify them.
+T10 Questions;True or False? This constellation is Cassiopeia.
+;True or False? This constellation is Draco.
+;True or False? This constellation is Gemini.
+;True or False? This constellation is Leo.
+;True or False? This constellation is Virgo.
+;True or False? This constellation is Lyra.
+;True or False? This constellation is Scorpius.
+;True or False? This constellation is Hercules.
+T11 (Headlines);Newspapers Headlines: You will be given headlines, and asked to identify the magazine that published the article, between The Economist and WIRED.
+T11 Questions;This headline is from:
+;This headline is from:
+;This headline is from:
+;This headline is from:
+;This headline is from:
+;This headline is from:
+;This headline is from:
+;This headline is from:
+T12 (Synonyms);Synonyms: You will be given words, and asked to identify the correct synonym corresponding to each word.
+T12 Questions;True or False? Refractory is a synonym for recalcitrant.
+;True or False? Hate is a synonym for noxious.
+;True or False? Callow is a synonym for placid.
+;True or False? Calm is a synonym for harangue.
+;True or False? Complex is a synonym for knotty.
+;True or False? Annihilate is a synonym for opportune.
+;True or False? Plaintiff is a synonym for payment.
+;True or False? Hedonism is a synonym for pleasure seeking.
+T13 (Music);Classical Compositions: You will be asked to listen to audio clips of classical compositions, and asked to identify the composer.
+T13 Questions;True or False? This piece was composed by Bach.
+;True or False? This piece was composed by Chopin.
+;True or False? This piece was composed by Handel.
+;True or False? This piece was composed by Chopin.
+;True or False? This piece was composed by Chopin.
+;True or False? This piece was composed by Brahms.
+;True or False? This piece was composed by Debussy.
+;True or False? This piece was composed by Tchaikovsky
+T14 (Midterms);US Midterm Predictions: You will be given the names American states, and be asked to predict whether the majority of Congress-members elected in that state will be Republican or Democrat.
+T14 Questions;In Arizona, a majority of elected Congress-members will be:
+;In Georgia, a majority of elected Congress-members will be:
+;In Pennsylvania, a majority of elected Congress-members will be:
+;In Nevada, a majority of elected Congress-members will be:
+;In Wisconsin, a majority of elected Congress-members will be:
+;In Florida, a majority of elected Congress-members will be:
+;In New Hampshire, a majority of elected Congress-members will be:
+;In Ohio, a majority of elected Congress-members will be:
+T15 (NBA);NBA Predictions: You will be given upcoming NBA games and asked to predict the games' outcome.
+T15 Questions;True or False? Dallas Mavericks will win against Brooklyn Nets on Thursday October, 27th.
+;True or False? Miami Heats will win against Golden State Warriors on Thursday October, 27th.
+;True or False? Cleveland Cavaliers will lose against Boston Celtics on Friday October, 28th.
+;True or False? New York Knicks will win against MilwaukeeBucks  on Friday October, 28th.
+;True or False? Utah Jazz will win against Denver Nuggets  on Friday October, 28th.
+;True or False? New Orleans Pelicans will lose against Phoenix Suns  on Friday October, 28th.
+;True or False? Philadelphia 76ers will lose against Chicago Bulls on Saturday October, 29th.
+;True or False? Indiana Pacers will lose against Brooklyn Nets on Saturday October, 29th.
