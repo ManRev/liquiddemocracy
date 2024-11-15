@@ -1,6 +1,6 @@
 # Tracking Truth with Liquid Democracy
 
-Welcome to the Liquid Democracy Replication Package! This repository provides the code, data, and materials needed to reproduce the analyses and results presented in the study *Tracking Truth with Liquid Democracy*. Below, you'll find a detailed structure and description of the repository, along with information on each file and dataset.
+Welcome to the Liquid Democracy Replication Package! This repository provides the code, data, and materials needed to reproduce the analyses and results presented in the study *[Tracking Truth with Liquid Democracy](https://arxiv.org/pdf/2107.11868)*. Below, you'll find a detailed structure and description of the repository, along with information on each file and dataset.
 
 ---
 
@@ -31,7 +31,7 @@ The `data` folder includes various datasets used throughout the analyses. Below 
 | File               | Description                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------|
 | `anova.csv`        | Contains the data to perform an ANOVA analyses for gender correlations.                                                        |
-| `data.csv`         | Raw data collected on voting preferences and participant choices.                            |
+| `data.csv`         | Raw data collected on voting preferences and participant choices (anonymized).                            |
 | `LDvDD_means.csv`  | Aggregated means data comparing Liquid Democracy (LD) and Direct Democracy (DD) results.     |
 | `LDvDD.csv`        | Detailed dataset comparing LD and DD by question.|
 | `phi_w_gmm.csv`    | Estimated $\varphi$ for each pair of expertise.          |
@@ -64,7 +64,7 @@ This directory maps every single Figure and Table in the paper to the piece of c
 1. Clone the repository.
    ```bash
    git clone https://github.com/ManRev/liquiddemocracy.git
-2. You may need a R interpreter to run `R_notebook_LiquidDemocracy.Rmd`. Example: download R Studio [here](https://posit.co/products/open-source/rstudio/).
-3. To use `EmpiricalAnalysis.ipynb`, you will need to install packages from `code/requirements.txt`
+2. You may need a R interpreter to run `R_notebook_LiquidDemocracy.Rmd`. Example: download R Studio [here](https://posit.co/products/open-source/rstudio/). The packages you will need are listed in the first cell of the notebook.
+3. To use `EmpiricalAnalysis.ipynb`, you will need to install packages from `code/requirements.txt` Python 3.7.6 was used.
 3. Navigate to the `code` folder and open the main analysis notebooks to begin reproducing the results.
 4. Reach out to mrevel@mit.edu shall you have any question!
