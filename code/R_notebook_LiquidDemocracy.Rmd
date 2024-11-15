@@ -1,0 +1,147 @@
+---
+title: "Liquid Democracy Statistical Analyses"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE) # Needed libraries 
+library(tidyverse)
+library(reshape2)
+library(lme4)
+library(corrplot)
+library(jtools)
+library(dotwhisker)
+library(broom)
+library(knitr)
+library(ggfortify)
+library(nlme)
+library(simr)
+library(pscl)
+library(foreign) 
+library("gdata")
+library('ri2')
+library(lmerTest)
+library(binom)
+library(ggthemes)
+library(ggthemes)
+library(lfe)
+library(broom.mixed)
+library(lmtest)
+library(sandwich)
+library(multiwayvcov)
+```
+
+# Estimate Q
+
+```{r}
+## [RESULT 6.3.2 (q estimate)]
+focus_on = 'B2'
+if (focus_on == 'B1'){
+  data_ <- read.csv("../data/R_paper_pre_study.csv")}
+if (focus_on == 'B2'){
+  data_ <- read.csv("../data/R_paper.csv")}
+
+model.d <- glm(ProbaDel ~ Normalized_IRT, data=data_, family=binomial(logit))
+vcov_firm <- cluster.vcov(model.d, select(data_, unique_id))
+coeftest(model.d, vcov_firm)[1:2,]
+```
+
+```{r}
+## [TABLES 5 and 6] with focus_on = 'B2'
+## [TABLE 17] with focus_on = 'B1'
+
+unique_values <- unique(data_$CodeExclu)
+for (value in unique_values){
+  matched_rows <- data_ %>% filter(CodeExclu == value)
+  print(value)
+  model.d <- glm(ProbaDel ~ Normalized_IRT, data=matched_rows, family=binomial(logit))
+  vcov_firm <- cluster.vcov(model.d, select(matched_rows, unique_id))
+  print(coeftest(model.d, vcov_firm)[1:2,])
+}
+```
+
+```{r}
+## [TABLE 7]
+
+model.d <- glm(ProbaDel ~ Normalized_IRT + unique_id + CodeExclu, data=data_, family=binomial(logit))
+vcov_firm <- cluster.vcov(model.d, select(data_, unique_id))
+coeftest(model.d, vcov_firm)[1:2,]
+
+model.d <- glm(ProbaDel ~ Normalized_IRT + unique_id, data=data_, family=binomial(logit))
+vcov_firm <- cluster.vcov(model.d, select(data_, unique_id))
+coeftest(model.d, vcov_firm)[1:2,]
+
+model.d <- glm(ProbaDel ~ Normalized_IRT + CodeExclu, data=data_, family=binomial(logit))
+vcov_firm <- cluster.vcov(model.d, select(data_, unique_id))
+coeftest(model.d, vcov_firm)[1:2,]
+
+model.d <- glm(ProbaDel ~ Normalized_IRT, data=data_, family=binomial(logit))
+vcov_firm <- cluster.vcov(model.d, select(data_, unique_id))
+coeftest(model.d, vcov_firm)[1:2,]
+```
+
+# Estimate Phi
+```{r}
+## [FIGURE 10 (3)]
+data_phi <- read.csv("../data/phi_w_gmm.csv") 
+data_phi <- data_phi[!data_phi$CodeExclu %in% c('S'), ]
+
+pdf('../figures/Figure10-3.pdf')
+qqnorm(data_phi$Weight, main='Normality Test for Weights')
+qqline(data_phi$Weight)
+dev.off()
+```
+
+# Estimate Competence Increase
+```{r}
+## Resultin K.3
+## [FIGURE 10(1)]
+lvd <- read.csv("../data/LDvDD_means.csv") 
+lvd <- lvd[!lvd$CodeExclu %in% c('S'), ]
+lvd$full_name <- paste(lvd$CodeExclu, lvd$ExpNum, sep = "_")
+
+pdf('../figures/Figure10-1.pdf')
+qqnorm(lvd$Estimate, main='Normality Tests for Direct and Liquid Average')
+qqline(lvd$Estimate)
+dev.off()
+
+lvd$CodeExcluF <- factor(lvd$CodeExclu)
+lvd$ExpNum <- factor(lvd$ExpNum)
+
+summary(felm(data = lvd, Estimate ~ Cat | ExpNum + CodeExclu| 0 |full_name))
+```
+
+# Estimate gender impact
+```{r}
+## [FIGURES 9 and 10-4/5]
+
+data_anova <- read.csv("../data/anova.csv") 
+
+pdf('../figures/Figure10-4.pdf')
+qqnorm(data_anova$ProbaDel, main='Normality Test for Probability of Delegating')
+qqline(data_anova$ProbaDel)
+dev.off()
+
+pdf('../figures/Figure10-5.pdf')
+qqnorm(data_anova$Normalized_IRT, main='Normality Test for Expertise')
+qqline(data_anova$Normalized_IRT)
+dev.off()
+
+aov.model <- aov(data = data_anova, ProbaDel ~ gender)
+summary(aov.model)
+pdf('../figures/Figure9-a.pdf')
+plot(TukeyHSD(aov.model))
+dev.off()
+
+pdf('../figures/Figure9-b.pdf')
+aov.model <- aov(data = data_anova, Normalized_IRT ~ gender, na.action=na.exclude)
+summary(aov.model)
+plot(TukeyHSD(aov.model))
+dev.off()
+```
+
+
