@@ -4,3 +4,5 @@ code/EmpiricalAnalysis_R.pdf
 code/R_notebook_LiquidDemocracy.nb.html
 code/try.ipynb
 data/data_s.csv
+.DS_Store
+material/.DS_Store
